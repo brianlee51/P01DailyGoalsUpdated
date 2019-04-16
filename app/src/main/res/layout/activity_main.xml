@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="@string/read"
             android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -24,7 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/repeat"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
         <RadioGroup android:id="@+id/radioGroup1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,13 +37,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/yes" />
+                android:text="@string/yes"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radio1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no" />
+                android:text="@string/no"
+                android:textSize="18sp" />
         </RadioGroup>
 
         <TextView
@@ -50,6 +54,7 @@
             android:layout_height="wrap_content"
             android:text="@string/arrive"
             android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -57,7 +62,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/repeat"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/radioGroup2"
@@ -70,13 +76,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/yes" />
+                android:text="@string/yes"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radio4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no" />
+                android:text="@string/no"
+                android:textSize="18sp" />
         </RadioGroup>
 
         <TextView
@@ -85,6 +93,7 @@
             android:layout_height="wrap_content"
             android:text="@string/attempt"
             android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -92,7 +101,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/repeat"
-            android:textColor="@android:color/background_dark" />
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/radioGroup3"
@@ -105,13 +115,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="@string/yes" />
+                android:text="@string/yes"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radio6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/no" />
+                android:text="@string/no"
+                android:textSize="18sp" />
         </RadioGroup>
 
         <TextView
@@ -120,6 +132,7 @@
             android:layout_height="wrap_content"
             android:text="@string/personal"
             android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <EditText
