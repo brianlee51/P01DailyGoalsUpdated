@@ -2,7 +2,6 @@ package sg.edu.rp.c346.p01_dailygoals;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
