@@ -1,6 +1,9 @@
 package sg.edu.rp.c346.p01_dailygoals;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,5 +46,44 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    protected void onPause() {
+        super.onPause();
+        RadioGroup rg1 = findViewById(R.id.radioGroup1);
+        RadioGroup rg2 = findViewById(R.id.radioGroup2);
+        RadioGroup rg3 = findViewById(R.id.radioGroup3);
+        EditText etReflection = findViewById(R.id.editTextReflection);
+        int selectedButtonId1 = rg1.getCheckedRadioButtonId();
+        int selectedButtonId2 = rg2.getCheckedRadioButtonId();
+        int selectedButtonId3 = rg3.getCheckedRadioButtonId();
+        String text = etReflection.getText().toString();
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor prefEdit = prefs.edit();
+        prefEdit.putInt("rg1", selectedButtonId1);
+        prefEdit.putInt("rg2", selectedButtonId2);
+        prefEdit.putInt("rg3", selectedButtonId3);
+        prefEdit.putString("text", text);
+
+        prefEdit.commit();
+    }
+
+    protected void onResume() {
+        super.onResume();
+        RadioGroup rg1 = findViewById(R.id.radioGroup1);
+        RadioGroup rg2 = findViewById(R.id.radioGroup2);
+        RadioGroup rg3 = findViewById(R.id.radioGroup3);
+        EditText etReflection = findViewById(R.id.editTextReflection);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        int intRB1 = prefs.getInt("rg1",0);
+        int intRB2 = prefs.getInt("rg2",0);
+        int intRB3 = prefs.getInt("rg3",0);
+        String strText = prefs.getString("text", "");
+
+        rg1.check(intRB1);
+        rg2.check(intRB2);
+        rg3.check(intRB3);
+        etReflection.setText(strText);
     }
 }
